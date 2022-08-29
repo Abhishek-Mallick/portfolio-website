@@ -34,6 +34,7 @@ async function open_terminal(){
   createCode("about", "Know more about me");
   createCode("projects", "Have a look at my projects and the contributions🚀");
   createCode("social -a", "Lists all my socials");
+  createCode("resume","view my online resume");
   createCode("exit", "To exit from the server");
 
   await delay(500);
@@ -79,6 +80,7 @@ async function getInputValue(){
     createCode("projects", "Have a look at my projects and the contributions🚀");
     createCode("about", "Know more about me");
     createCode("social -a", "All my social networks.");
+    createCode("resume","view my online resume");
     createCode("blogs", "All my Blogs")
     createCode("clear", "Clean the terminal.");
     
@@ -87,12 +89,16 @@ async function getInputValue(){
     trueValue(value);
     createText("<a href='https://github.com/Abhishek-Mallick' target='_blank'><i class='fab fa-github white'></i> github.com/Abhishek-Mallick</a>")
   }
+  else if(value === "resume"){
+    trueValue(value);
+    createText("<a href='https://abhishek-mallick.github.io/Resume/' target='_blank'><i class='fas fa-file white'></i> Resume</a>")
+  }
   else if(value === "about"){
     trueValue(value);
-    createText("Hello I'm Abhishek ;)")
+    createText("Hello I'm Abhishek")
     createText("I'm currently a 2nd-year undergrad pursuing my CSE degree from KIIT.</span> I have worked on different machine learning and web-dev projects. I'm currently exploring DevOps learning how processes are brought together and automated.")
   }
-  else if(value === "social -a"){
+  else if(value === "social -a" || value === "social" || value === "socials -a" || value === "socials -a" || value === "socials"){
     trueValue(value);
     createText("<a href='https://github.com/Abhishek-Mallicks' target='_blank'><i class='fab fa-github white'></i> github.com/Abhishek-Mallick</a>")
     createText("<a href='https://www.linkedin.com/in/abhishek-mallick09/' target='_blank'><i class='fab fa-linkedin-in white'></i> www.linkedin.com/in/abhishek-mallick09/</a>")
