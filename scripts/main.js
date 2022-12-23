@@ -91,7 +91,7 @@ async function getInputValue(){
   }
   else if(value === "resume"){
     trueValue(value);
-    createText("<a href='https://abhishek-mallick.github.io/Resume/' target='_blank'><i class='fas fa-file white'></i> Resume</a>")
+    createText("<a href='https://drive.google.com/file/d/1zwIq6vWmpDXWsuWoxWk-9c_KgBWesMhR/view?usp=sharing' target='_blank'><i class='fas fa-file white'></i> Resume</a>")
   }
   else if(value === "about"){
     trueValue(value);
