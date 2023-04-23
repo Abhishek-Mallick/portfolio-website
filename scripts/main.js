@@ -91,7 +91,7 @@ async function getInputValue(){
   }
   else if(value === "resume"){
     trueValue(value);
-    createText("<a href='#' target='_blank'><i class='fas fa-file white'></i> Resume</a>")
+    createText("<a href='' target='_blank'><i class='fas fa-file white'></i> Resume</a>")
   }
   else if(value === "about"){
     trueValue(value);
