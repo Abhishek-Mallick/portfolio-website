@@ -2,6 +2,7 @@
 	import HeroImage from '../../components/atoms/HeroImage.svelte';
 	import Button from '../atoms/Button.svelte';
 	import Socials from '../molecules/Socials.svelte';
+	import Code_profiles from '../molecules/Code_profiles.svelte'
 
 	function handleClick() {
 		const el = document.querySelector('#work');
@@ -12,13 +13,18 @@
 
 <section id="home" class="wrapper">
 	<div>
-		<h1>𝕩00</h1>
+		<h1>Abhishek</h1>
+		<h2>Mallick</h2>
 		<h5>
-			"Bringing Linux to Life, One Byte at a Time through Tech Tinkering!"<br />Attempting to
+			"Software Developer | Bringing Linux to Life!"<br />Attempting to
 			program.
 		</h5>
 		<div class="socials">
 			<Socials />
+		</div>
+		<h5>My coding profiles:</h5>
+		<div class="socials">
+			<Code_profiles />
 		</div>
 		<Button side on:click={handleClick} on:keypress={handleClick}>Discover my work ↓</Button>
 	</div>
