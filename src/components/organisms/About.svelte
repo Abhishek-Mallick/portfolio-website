@@ -3,7 +3,7 @@
 
 	// i didnt write this idk
 	let getAge = () => {
-		let birthDate = new Date('2004/01/28');
+		let birthDate = new Date('2003/03/09');
 		const ageMs = Date.now() - birthDate.getTime();
 		const preciseAge = (ageMs / 31536000000).toFixed(8);
 		return preciseAge;
@@ -19,19 +19,18 @@
 	<div class="text">
 		<h3>Bio</h3>
 		<p>
-			Hey there, I'm Umar! I'm <Tooltip tip={age}><span>{Math.floor(Number(age))}</span></Tooltip>
-			. I've been tinkering with operating systems and obsessing over efficiency and performance of processes,
-			and services since I've gained concinous. until
-			<span>2017</span>, until then it was just with random linux services and then it eventually
-			turned into Linux Customizations from which I've learned alot and somewhere around
-			<span>2020</span>. however, I’ve grown a knack for programming. I like contributing to
-			<Tooltip tip="He's Lying he hasn't Contributed To ANYTHING">
+			Hey there, I'm Abhishek! I am a third-year undergrad at KIIT. Currently I'm working as a SDE intern at Deepkapha.
+			I thrive on the excitement of learning and exploring new things within the tech industry. Constantly seeking ways to grow and expand my knowledge, I actively engage in various opportunities that challenge and push me to my full potential.
+			<br>
+			<span>Hackathons</span> have become one of my favorite avenues for personal and professional growth, as I love collaborating with like-minded individuals and building innovative solutions. 
+
+			I like contributing to
+			<Tooltip tip="it's true">
 				<a href="https://github.com/xwedx00" target="_blank" rel="noreferrer">
 					<span>open source</span>
 				</a>
 			</Tooltip>
-			as a developer, which is probably the reason why you've ended up here. Currently struggling with
-			Svelte and Typescript.
+			as a developer, which is probably the reason why you've ended up here.
 		</p>
 	</div>
 </section>

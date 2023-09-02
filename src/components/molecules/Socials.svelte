@@ -3,9 +3,9 @@
 </script>
 
 <div class="socials-container">
-	<Social icon="github" tip="xwedx00" link="https://github.com/xwedx00" />
-	<Social icon="discord" tip="xwedx00" link={`https://discord.com/users/asd`} />
-	<Social icon="email" tip="xwedx00@protonmail.com" link="mailto:xwedx00@protonmail.com" />
+	<Social icon="github" tip="Abhishek-Mallick" link="https://github.com/Abhishek-Mallick" />
+	<Social icon="discord" tip="abhishek-mallick09" link={`https://www.linkedin.com/in/abhishek-mallick09/`} />
+	<Social icon="email" tip="mallickabhishek97@gmail.com" link="mailto:mallickabhishek97@gmail.com" />
 </div>
 
 <style>
