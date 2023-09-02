@@ -23,7 +23,7 @@
 		on:mousemove={enterRotate3D}
 		on:mouseleave={leaveRotate3D}
 		class="img"
-		style:background-image="url(purple.gif)"
+		style:background-image="url(pic1.gif)"
 		style:transform="perspective(500px) {zoom ? 'scale(0.9)' : ''} rotateX({xRotation}deg) rotateY({yRotation}deg)"
 	/>
 </div>
@@ -42,9 +42,9 @@
 	}
 
 	.img {
-		border-radius: 48px;
+		border-radius: 349px;
 		width: 425px;
-		height: 400px;
+		height: 425px;
 		z-index: 1;
 		display: block;
 		transition: width 0.4s var(--bezier-one), transform 0.4s var(--bezier-one);
@@ -68,6 +68,9 @@
 		z-index: 1;
 		animation: float 6s ease-in-out infinite;
 		animation-play-state: running;
+		background-color: rgba(255, 255, 255, 0);
+		padding: 0%;
+		border: 0;
 
 		@media (max-width: 1240px) {
 			display: flex;
