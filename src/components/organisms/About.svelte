@@ -26,7 +26,7 @@
 
 			I like contributing to
 			<Tooltip tip="it's true">
-				<a href="https://github.com/xwedx00" target="_blank" rel="noreferrer">
+				<a href="https://github.com/Abhishek-Mallick" target="_blank" rel="noreferrer">
 					<span>open source</span>
 				</a>
 			</Tooltip>
