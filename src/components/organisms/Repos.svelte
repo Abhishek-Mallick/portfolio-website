@@ -5,7 +5,8 @@
 	let repos: Repo[];
 
 	onMount(async () => {
-		const response = await fetch('https://gh-pinned-repos.egoist.dev/?username=Abhishek-Mallick');
+		// const response = await fetch('https://gh-pinned-repos.egoist.dev/?username=Abhishek-Mallick');
+		const response = await fetch('https://gh-pinned-repos--master.deno.dev/?username=Abhishek-Mallick');
 		repos = await response.json();
 	});
 </script>
