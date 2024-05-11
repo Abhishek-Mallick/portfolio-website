@@ -19,7 +19,7 @@
 	<div class="text">
 		<h3>Bio</h3>
 		<p>
-			Hey there, I'm Abhishek! I am a third-year undergrad at KIIT. Currently I'm working as a SDE intern at Deepkapha.
+			Hey there, I'm Abhishek! I am a third-year undergrad at KIIT. Currently I'm working as a SDE intern at JP Morgan Chase & Co.
 			I thrive on the excitement of learning and exploring new things within the tech industry. Constantly seeking ways to grow and expand my knowledge, I actively engage in various opportunities that challenge and push me to my full potential.
 			<br>
 			<span>Hackathons</span> have become one of my favorite avenues for personal and professional growth, as I love collaborating with like-minded individuals and building innovative solutions. 
@@ -36,27 +36,28 @@
 	<!-- Experience section -->
 	<div class="text">
 		<h3 style="margin-bottom: 1rem;">Experience</h3>
-		<!-- <div class="repo-card" style="margin-bottom:1rem;">
+		<div class="repo-card" style="margin-bottom:1rem;">
 			<div id="top-part">
 				<div class="info">
 					<h6>Software Developer Intern</h6>
 				</div>
-				<div>
-					<img src="icons/jpmc.png" alt="open in new tab" id="open-exp" />
+				<div style="width: 200px; margin-top: 10px;">
+					<img src="icons/jpmc-transparent.png" alt="" id="open-exp" style="max-width: 100%; height: auto;" />
 				</div>
+				
 			</div>
 			<div>
 				<h3>JP Morgan Chase and Co.</h3>
-				<h6>Bengaluru</h6>
+				<h6>Bengaluru | May'24 - Present</h6>
 			</div>
-		</div> -->
+		</div>
 		<div class="repo-card">
 			<div id="top-part">
 				<div class="info">
 					<h6>Software Developer Intern</h6>
 				</div>
 				<div>
-					<img src="icons/dk.png" alt="open in new tab" id="open-exp" />
+					<img src="icons/dk.png" alt="" id="open-exp" />
 				</div>
 			</div>
 			<div>
