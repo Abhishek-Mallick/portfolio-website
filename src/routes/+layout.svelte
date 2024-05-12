@@ -63,7 +63,7 @@
 	<meta name="twitter:image" itemprop="image" content="/x00.png" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="theme-color" content="#CCE2F2" />
-	<title>Portfolio</title>
+	<title>Abhishek Mallick</title>
 </svelte:head>
 
 <svelte:window on:click={playSFX} />
