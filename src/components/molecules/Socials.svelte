@@ -1,6 +1,9 @@
 <script>
 	import Social from "../atoms/Social.svelte";
 
+	/**
+	 * @param {string} text
+	 */
 	function copyToClipboard(text) {
 	  try {
 		navigator.clipboard.writeText(text);
@@ -21,6 +24,7 @@
 		document.body.removeChild(element);
   
 		if (previouslyFocusedElement) {
+		  // @ts-ignore
 		  previouslyFocusedElement.focus();
 		}
 		alert("Email copied to clipboard!");
