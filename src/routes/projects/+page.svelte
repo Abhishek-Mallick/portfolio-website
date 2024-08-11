@@ -1,28 +1,92 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { Repo } from '../../util/types';
-	import ButtonProjects from '../atoms/ButtonProjects.svelte';
+	import ButtonProjects from '../../components/atoms/ButtonProjects.svelte';
 	import { goto } from '$app/navigation';
+	import Tooltip from '../../components/atoms/Tooltip.svelte';
 
 	function handleProjectsClick() {
-		goto('/projects');
+		goto('/');
 	}
 
+	let repos: Repo[] = [];
 
-
-	let repos: Repo[];
+	// Static array of repositories
+	const staticRepos: Repo[] = [
+		{
+			link: 'https://github.com/Abhishek-Mallick/universal-box',
+			owner: 'Abhishek-Mallick',
+			repo: 'Universal Box',
+			description: 'Universal-Box is your all-in-one solution for rapid code scaffolding and streamlined development. With a wide range of pre-built templates, this npm package simplifies the process of setting up boilerplate code for any project and offers single-command deployment.',
+			languageColor: '#f1e05a',
+			language: 'JavaScript',
+			stars: 4,
+			forks: 10
+		},
+        {
+			link: 'https://github.com/Abhishek-Mallick/Togetherly',
+			owner: 'Abhishek-Mallick',
+			repo: 'Togetherly',
+			description: 'Togetherly is a real-time digital whiteboarding web application that allows distributed teams to collaborate visually. Break geographical barriers, share ideas, and work in real-time, made using Next.js and Convex.',
+			languageColor: '#f1e05a',
+			language: 'JavaScript',
+			stars: 8,
+			forks: 2
+		},
+        {
+			link: 'https://github.com/Abhishek-Mallick/JanSevak',
+			owner: 'Abhishek-Mallick',
+			repo: 'JanSevak',
+			description: 'JanSevak is a AI powered HealthCare Management System. The system allows users to register as patients, book appointments, and predict diseases based on symptoms. Doctors can view and manage appointments. Additionally, the system provides information on various health-related topics through blog posts.',
+			languageColor: '#2b7489',
+			language: 'Python',
+			stars: 6,
+			forks: 0
+		},
+		{
+			link: 'https://github.com/Abhishek-Mallick/Pluto',
+			owner: 'Abhishek-Mallick',
+			repo: 'Pluto',
+			description: 'SaaS platform for building websites, managing projects, and creating custom dashboards. Designed for multivendor environments, it supports agency and sub-account management, unlimited funnel hosting, role-based access, and real-time performance tracking.',
+			languageColor: '#007acc',
+			language: 'TypeScript',
+			stars: 10,
+			forks: 4
+		},
+		{
+			link: 'https://github.com/devhub-ai/devhub',
+			owner: 'Abhishek-Mallick',
+			repo: 'DevHub',
+			description: 'Revolutionizing collaboration for innovation. Streamline your process by connecting with peers who complement your skills and interests, forming dynamic teams to tackle projects, hackathons, and more.',
+			languageColor: '#007acc',
+			language: 'TypeScript',
+			stars: 20,
+			forks: 8
+		},
+		{
+			link: 'https://github.com/Abhishek-Mallick/FarmIntelli',
+			owner: 'Abhishek-Mallick',
+			repo: 'FarmIntelli',
+			description: 'Empowering farmers with AI-driven insights for smarter agriculture. From predicting the best crops for your climate to optimizing fertilizer use and more, FarmIntelli guides you in making data-driven decisions for a more efficient and sustainable farming future.',
+			languageColor: '#2b7489',
+			language: 'Python',
+			stars: 2,
+			forks: 0
+		}
+	];
 
 	onMount(async () => {
-		// const response = await fetch('https://gh-pinned-repos.egoist.dev/?username=Abhishek-Mallick');
-		// const response = await fetch('https://gh-pinned-repos--master.deno.dev/?username=Abhishek-Mallick');
 		const response = await fetch('https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=Abhishek-Mallick');
-		repos = await response.json();
+		const fetchedRepos: Repo[] = await response.json();
+		
+		// Combine fetched repos with static repos
+		repos = [...fetchedRepos, ...staticRepos];
 	});
 </script>
 
-<section class="wrapper" id="work">
+<section class="wrapper" id="work" style="padding-top: 40px">
 	<div class="title">
-		<h2><span>code</span>:work</h2>
+		<h2><span>My</span>:Projects</h2>
 	</div>
 	<div class="grid">
 		{#if repos}
@@ -76,10 +140,8 @@
 			<div class="repo-card shimmer" />
 		{/if}
 	</div>
-	<div style="display: flex; justify-content: center; align-items: center;">
-		<!-- <ButtonProjects>View more projects ↗</ButtonProjects> -->
-		<ButtonProjects side on:click={handleProjectsClick}>View more projects ↗</ButtonProjects>
-
+	<div style="display: flex; justify-content: center; align-items: center; padding-bottom: 40px">
+		<ButtonProjects side on:click={handleProjectsClick}>Back to portfolio ↙</ButtonProjects>
 	</div>			
 </section>
 
