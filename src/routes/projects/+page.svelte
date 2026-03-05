@@ -103,7 +103,7 @@
 								<h6>{owner}</h6>
 							</div>
 							<div>
-								<img src="icons/open.svg" alt="open in new tab" id="open" />
+								<img src="/icons/open.svg" alt="open in new tab" id="open" />
 							</div>
 						</div>
 						<div>
@@ -117,13 +117,13 @@
 							</div>
 							<div class="info">
 								{#if stars}
-									<img src="icons/star.svg" id="star" alt="star" />
+									<img src="/icons/star.svg" id="star" alt="star" />
 									<h6>{stars}</h6>
 								{/if}
 							</div>
 							<div class="info">
 								{#if forks}
-									<img src="icons/fork.svg" id="fork" alt="fork" />
+									<img src="/icons/fork.svg" id="fork" alt="fork" />
 									<h6>{forks}</h6>
 								{/if}
 							</div>
@@ -146,7 +146,7 @@
 </section>
 
 <style lang="scss">
-	@import '../../styles/mixins.scss';
+	@use '../../styles/mixins.scss' as *;
 
 	.title {
 		display: flex;

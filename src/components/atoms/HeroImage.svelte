@@ -19,11 +19,15 @@
 
 <div class="img-container">
 	<img
-		alt = ""
+		src="/icons/profile.jpeg"
+		alt="Abhishek Mallick"
+		width="320"
+		height="320"
+		loading="eager"
+		fetchpriority="high"
 		on:mousemove={enterRotate3D}
 		on:mouseleave={leaveRotate3D}
 		class="img"
-		style:background-image="url(pic1.gif)"
 		style:transform="perspective(500px) {zoom ? 'scale(0.9)' : ''} rotateX({xRotation}deg) rotateY({yRotation}deg)"
 	/>
 </div>
@@ -42,25 +46,25 @@
 	}
 
 	.img {
-		border-radius: 349px;
-		width: 425px;
-		height: 425px;
+		border-radius: 50%;
+		width: 320px;
+		height: 320px;
+		max-width: 100%;
+		object-fit: cover;
+		object-position: center;
 		z-index: 1;
 		display: block;
 		transition: width 0.4s var(--bezier-one), transform 0.4s var(--bezier-one);
 		align-self: start;
 		background-color: var(--neutral-one);
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
 
-		@media (max-width: 768px) {
+		@media screen and (max-width: 768px) {
 			display: none;
 		}
 
-		@media (max-width: 1240px) {
-			width: clamp(340px, 40vw, 425px);
-			height: clamp(300px, 40vw, 400px);
+		@media screen and (max-width: 1240px) {
+			width: clamp(260px, 32vw, 320px);
+			height: clamp(260px, 32vw, 320px);
 		}
 	}
 

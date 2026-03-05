@@ -7,14 +7,6 @@
 	<slot />
 </button>
 <style lang="scss">
-	html, body {
-		height: 100%;
-		margin: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
 	button {
 		font-size: 100%;
 		border-radius: 16px;

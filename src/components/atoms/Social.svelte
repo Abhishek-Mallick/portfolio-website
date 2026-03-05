@@ -9,7 +9,7 @@
 <Tooltip {tip}>
 	<div>
 		<a href={link} target="_blank" rel="noreferrer">
-			<img src="icons/{icon}.svg" alt={icon} />
+			<img src="/icons/{icon}.svg" alt={icon} />
 		</a>
 	</div>
 </Tooltip>

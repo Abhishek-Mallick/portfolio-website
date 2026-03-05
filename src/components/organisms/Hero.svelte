@@ -2,7 +2,6 @@
 	import HeroImage from '../../components/atoms/HeroImage.svelte';
 	import Button from '../atoms/Button.svelte';
 	import Socials from '../molecules/Socials.svelte';
-	import Code_profiles from '../molecules/Code_profiles.svelte'
 
 	function handleClick() {
 		const el = document.querySelector('#work');
@@ -22,17 +21,13 @@
 		<div class="socials">
 			<Socials />
 		</div>
-		<h5>My coding profiles:</h5>
-		<div class="socials">
-			<Code_profiles />
-		</div>
 		<Button side on:click={handleClick} on:keypress={handleClick}>Discover my work ↓</Button>
 	</div>
 	<HeroImage />
 </section>
 
 <style lang="scss">
-	@import '../../styles/mixins.scss';
+	@use '../../styles/mixins.scss' as *;
 
 	section {
 		scroll-margin-top: 20rem;
