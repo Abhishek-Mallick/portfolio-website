@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@sveltejs/kit':
+        specifier: ^1.20.4
+        version: 1.30.4(svelte@4.2.20)(vite@4.5.14(sass@1.97.3))
       svelte-spa-router:
         specifier: ^4.0.1
         version: 4.0.1
@@ -21,9 +24,6 @@ importers:
       '@sveltejs/adapter-vercel':
         specifier: ^3.1.0
         version: 3.1.0(@sveltejs/kit@1.30.4(svelte@4.2.20)(vite@4.5.14(sass@1.97.3)))
-      '@sveltejs/kit':
-        specifier: ^1.20.4
-        version: 1.30.4(svelte@4.2.20)(vite@4.5.14(sass@1.97.3))
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.45.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
