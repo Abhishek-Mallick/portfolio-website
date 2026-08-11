@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { Repo } from '../../util/types';
+	import { GITHUB_USERNAME } from '$lib/github';
 	import ButtonProjects from '../atoms/ButtonProjects.svelte';
 	import { goto } from '$app/navigation';
 
@@ -13,10 +14,15 @@
 	let repos: Repo[];
 
 	onMount(async () => {
-		// const response = await fetch('https://gh-pinned-repos.egoist.dev/?username=Abhishek-Mallick');
-		// const response = await fetch('https://gh-pinned-repos--master.deno.dev/?username=Abhishek-Mallick');
-		const response = await fetch('https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=Abhishek-Mallick');
-		repos = await response.json();
+		try {
+			const response = await fetch(
+				`/api/pinned-repos?username=${encodeURIComponent(GITHUB_USERNAME)}`
+			);
+			if (!response.ok) throw new Error('Failed to fetch pinned repos');
+			repos = await response.json();
+		} catch {
+			repos = [];
+		}
 	});
 </script>
 
